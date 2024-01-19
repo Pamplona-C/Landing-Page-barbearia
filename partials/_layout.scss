@@ -261,6 +261,14 @@
     }
 }
 
+@media screen and (max-width:7686px){
+    footer{
+        p{
+            font-size: 12px;
+        }
+    }
+}
+
 .footer-icons{
     display: flex;
     gap: 14px;
