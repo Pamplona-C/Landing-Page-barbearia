@@ -241,3 +241,76 @@
         transform: none;
     }
 }
+
+// ---------------------------------------
+
+// Footer
+
+.footer{
+    display: flex;
+    width: 100%;
+    padding: 54px 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $white-normal;
+    gap: 39px;
+
+    p{
+        font-weight: 700;
+    }
+}
+
+.footer-icons{
+    display: flex;
+    gap: 14px;
+}
+
+.btn-whatsapp{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10;
+    
+
+    img{
+        max-width: 74px;
+        transition: transform 0.4s;
+    }
+
+    img:hover{
+        transform: scale(1.1);
+    }
+}
+
+.btn-whatsapp .tooltip-text{
+    visibility: hidden;
+    position: absolute;
+    width: 120px;
+    left: -140px;
+    color: $white-normal;
+    border-radius: 8px;
+    background-color: $black-normal;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+.btn-whatsapp:hover .tooltip-text{
+    visibility: visible;
+    opacity: 1;
+}
+
+@media screen and (max-width:768px){
+    .btn-whatsapp{
+        img{
+            max-width: 60px;
+            transition: none;
+        }
+        img:hover{
+            transform: none;
+        }
+    }
+    .btn-whatsapp:hover .tooltip-text{
+        visibility: hidden;
+    }
+}
